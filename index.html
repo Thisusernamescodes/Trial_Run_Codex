@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Display current task name -->
+        <h1 id="task-name">Task</h1>
+        <!-- Display elapsed time for current task -->
+        <div id="timer">00:00:00</div>
+        <!-- Navigation buttons to switch tasks -->
+        <div class="nav">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+            <!-- Pause/resume overall timer -->
+            <button id="pause">Pause</button>
+            <!-- Reset all timers -->
+            <button id="refresh">Refresh</button>
+            <!-- Add new task -->
+            <button id="addTask">Add Task</button>
+        </div>
+        <!-- Canvas for donut chart visualization -->
+        <canvas id="chart" width="300" height="300"></canvas>
+    </div>
+
+    <!-- Modal for adding a new task -->
+    <div id="task-dialog" class="modal hidden">
+        <div class="modal-content">
+            <label>
+                Name
+                <input id="task-name-input" type="text" maxlength="20" />
+            </label>
+            <label>
+                Color
+                <input id="task-color-input" type="color" value="#ff0000" />
+            </label>
+            <div class="dialog-actions">
+                <button id="task-save">Add</button>
+                <button id="task-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main script -->
+    <script src="app.js"></script>
+</body>
+</html>
