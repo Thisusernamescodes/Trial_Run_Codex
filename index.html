@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Display current task name -->
+        <h1 id="task-name">Task</h1>
+        <!-- Display elapsed time for current task -->
+        <div id="timer">00:00:00</div>
+        <!-- Navigation buttons to switch tasks -->
+        <div class="nav">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+        <!-- Canvas for donut chart visualization -->
+        <canvas id="chart" width="300" height="300"></canvas>
+    </div>
+
+    <!-- Main script -->
+    <script src="app.js"></script>
+</body>
+</html>
