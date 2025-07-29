@@ -48,6 +48,14 @@ body {
     text-align: center;
 }
 
+/* Layout for modal buttons */
+.dialog-actions {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
 .hidden {
     display: none;
 }
